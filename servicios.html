@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria IGMOBA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/igmoba.png" type="image/png">
+
+    <!-- Estilos adicionales (Tailwind CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Animaciones adicionales (Animate.css) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <!-- Aquí se cargará el header -->
+    <div id="header-container"></div>
+
+    <!-- Servicios Section -->
+    <section class="py-16 bg-blue-600 text-white">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 animate__animated animate__fadeIn animate__delay-1s">Nuestros Servicios</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: Asesoría en Compra de Terrenos -->
+                <div class="bg-blue-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 animate__animated animate__fadeIn animate__delay-2s">
+                    <div class="mb-4">
+                        <i class="fas fa-clipboard-list text-4xl text-white"></i> <!-- Icono de Asesoría en Compra -->
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Asesoría en Compra de Terrenos</h3>
+                    <p>Te ayudamos a tomar la mejor decisión en la compra de terrenos, ofreciéndote asesoría personalizada.</p>
+                    <button
+                        class="text-white bg-blue-700 hover:bg-blue-600 py-2 px-6 rounded-lg inline-block mt-4 transition duration-300 transform hover:scale-105"
+                        onclick="toggleDetails(1)">Ver más detalles</button>
+
+                    <!-- Más detalles específicos sobre la compra de terrenos (inicialmente ocultos) -->
+                    <div id="details-1" class="mt-4 hidden text-white-600">
+                        <p><strong>Proceso de Compra:</strong> Te acompañamos durante todo el proceso de compra, desde la
+                            selección hasta la firma del contrato.</p>
+                        <p><strong>Revisión de Documentos:</strong> Comprobamos que toda la documentación del terreno esté
+                            en regla para evitar futuros problemas.</p>
+                        <p><strong>Asesoría Financiera:</strong> Te brindamos asesoramiento sobre las opciones de
+                            financiamiento más adecuadas para tu compra.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Evaluación de Proyectos -->
+                <div class="bg-blue-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 animate__animated animate__fadeIn animate__delay-3s">
+                    <div class="mb-4">
+                        <i class="fas fa-chart-line text-4xl text-white"></i> <!-- Icono de Evaluación de Proyectos -->
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Evaluación de Proyectos</h3>
+                    <p>Te ofrecemos asesoramiento profesional en la evaluación de la viabilidad de tu proyecto sobre
+                        terrenos.</p>
+                    <button
+                        class="text-white bg-blue-700 hover:bg-blue-600 py-2 px-6 rounded-lg inline-block mt-4 transition duration-300 transform hover:scale-105"
+                        onclick="toggleDetails(2)">Ver más detalles</button>
+
+                    <!-- Más detalles específicos sobre evaluación de proyectos (inicialmente ocultos) -->
+                    <div id="details-2" class="mt-4 hidden text-white-600">
+                        <p><strong>Análisis de Viabilidad:</strong> Evaluamos si el terreno es adecuado para tu proyecto,
+                            considerando factores como la ubicación, accesibilidad y normativa local.</p>
+                        <p><strong>Estudio de Impacto Ambiental:</strong> Realizamos estudios de impacto ambiental para
+                            asegurarnos de que tu proyecto cumpla con las regulaciones ecológicas.</p>
+                        <p><strong>Planificación del Proyecto:</strong> Te ayudamos a desarrollar un plan estratégico para
+                            el éxito del proyecto, desde la concepción hasta la ejecución.</p>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Asesoría Legal -->
+                <div class="bg-blue-800 p-8 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 animate__animated animate__fadeIn animate__delay-4s">
+                    <div class="mb-4">
+                        <i class="fas fa-gavel text-4xl text-white"></i> <!-- Icono de Asesoría Legal -->
+                    </div>
+                    <h3 class="text-xl font-semibold mb-4">Asesoría Legal</h3>
+                    <p>Te brindamos seguridad jurídica durante todo el proceso de compra y venta de terrenos.</p>
+                    <button
+                        class="text-white bg-blue-700 hover:bg-blue-600 py-2 px-6 rounded-lg inline-block mt-4 transition duration-300 transform hover:scale-105"
+                        onclick="toggleDetails(3)">Ver más detalles</button>
+
+                    <!-- Más detalles específicos sobre asesoría legal (inicialmente ocultos) -->
+                    <div id="details-3" class="mt-4 hidden text-white-600">
+                        <p><strong>Revisión de Contratos:</strong> Te ayudamos a revisar los contratos de compra para
+                            garantizar que todas las condiciones sean favorables.</p>
+                        <p><strong>Asesoría en Notarización:</strong> Te acompañamos durante el proceso de notarización para
+                            que todo sea legalmente válido.</p>
+                        <p><strong>Resolución de Conflictos:</strong> Te asistimos en la resolución de cualquier disputa
+                            legal que pueda surgir durante el proceso de compra.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer cargado dinámicamente -->
+    <div id="footer-container"></div>
+
+    <!-- Script AOS (Animate On Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Cargar el header y el footer
+        window.onload = function () {
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    // Llamar a la función para inicializar el menú
+                    initializeMobileMenu();
+                });
+
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        };
+
+        // Función para inicializar el menú móvil
+        function initializeMobileMenu() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Verificamos si los elementos existen antes de aplicarles el evento
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('block');
+                });
+            }
+        }
+
+        // Función para mostrar/ocultar los detalles de los servicios
+        function toggleDetails(serviceId) {
+            const details = document.getElementById('details-' + serviceId);
+            details.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>

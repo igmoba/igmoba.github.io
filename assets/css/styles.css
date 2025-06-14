@@ -1,0 +1,129 @@
+/* Estilos Generales */
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f7fafc;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+}
+
+/* Hero Section */
+.container {
+  max-inline-size: 1200px;
+  margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-gray-100 {
+  background-color: #f7fafc;
+}
+
+.bg-blue-600 {
+  background-color: #3182ce;
+}
+
+.bg-blue-700 {
+  background-color: #2b6cb0;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-gray-600 {
+  color: #718096;
+}
+
+.text-blue-600 {
+  color: #3182ce;
+}
+
+/* Propiedades */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Hover effect */
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+.card-body a {
+  color: #3182ce;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.card-body a:hover {
+  color: #2b6cb0;
+}
+
+/* Servicios */
+.bg-blue-600 {
+  background-color: #3182ce;
+  color: white;
+}
+
+.text-white {
+  color: white;
+}
+
+.px-4 {
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.py-16 {
+  padding-block-start: 4rem;
+  padding-block-end: 4rem;
+}
+
+.rounded-lg {
+  border-radius: 10px;
+}
+
+.shadow-lg {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.transition {
+  transition: all 0.3s;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #2b6cb0;
+}
+
+.hover\:bg-blue-600:hover {
+  background-color: #3182ce;
+}

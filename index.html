@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria IGMOBA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/igmoba.png" type="image/png">
+
+    <!-- Agregar Font Awesome para el ícono del menú -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+    <!-- Agregar Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Estilos adicionales -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Agregar animaciones adicionales (Animate.css) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <!-- Aquí se cargará el header -->
+    <div id="header-container"></div>
+
+    <!-- Fondo de Video -->
+    <section class="relative w-full h-screen">
+        <!-- Video de Fondo -->
+        <video autoplay muted loop class="absolute w-full h-full object-cover z-0">
+            <source src="assets/videos/1.mp4" type="video/mp4">
+            Tu navegador no soporta el video de fondo.
+        </video>
+        <!-- Capa Oscura para mejorar la legibilidad del texto -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Contenido del Fondo -->
+        <div class="absolute inset-0 flex justify-center items-center text-center text-white px-6 z-10">
+            <div data-aos="fade-up">
+                <h1 class="text-5xl font-bold leading-tight mb-6 animate__animated animate__fadeIn animate__delay-1s">
+                    Encuentra el Terreno Perfecto para Tu Proyecto
+                </h1>
+                <p class="text-xl mb-8 animate__animated animate__fadeIn animate__delay-2s">
+                    Haz crecer tu inversión con nosotros. Terrenos únicos, listos para desarrollar.
+                </p>
+                <a href="propiedades.html"
+                    class="bg-green-600 text-white py-3 px-8 rounded-full text-xl hover:bg-green-700 transition-all duration-300 transform hover:scale-110">
+                    Ver Terrenos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Propiedades Populares -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto text-center px-6" data-aos="fade-up">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-12">Propiedades Populares</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Propiedad 1 -->
+                <div class="bg-white rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-2xl"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="relative">
+                        <img src="assets/images/propiedad1.jpg" alt="Propiedad 1"
+                            class="w-full h-64 object-cover transition-all duration-300 transform hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Terreno en la Playa</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                            <span>Ubicado en la costa, ideal para proyectos residenciales o comerciales.</span>
+                        </div>
+                        <a href="propiedades.html"
+                            class="text-green-600 mt-4 inline-block hover:bg-green-700 hover:text-white py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">Ver más detalles</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 2 -->
+                <div class="bg-white rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-2xl"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="relative">
+                        <img src="assets/images/propiedad2.jpg" alt="Propiedad 2"
+                            class="w-full h-64 object-cover transition-all duration-300 transform hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Terreno en el Centro</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                            <span>En pleno centro de la ciudad, excelente para proyectos comerciales de alto rendimiento.</span>
+                        </div>
+                        <a href="propiedades.html"
+                            class="text-green-600 mt-4 inline-block hover:bg-green-700 hover:text-white py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">Ver más detalles</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad 3 -->
+                <div class="bg-white rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-2xl"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="relative">
+                        <img src="assets/images/propiedad3.jpg" alt="Propiedad 3"
+                            class="w-full h-64 object-cover transition-all duration-300 transform hover:scale-110">
+                        <div class="absolute top-0 left-0 w-full h-full bg-black opacity-25"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Terreno en la Montaña</h3>
+                        <div class="flex items-center text-gray-600 mb-4">
+                            <i class="fas fa-map-marker-alt text-green-600 mr-2"></i>
+                            <span>Ideal para proyectos ecológicos o turísticos. Rodeado de naturaleza y tranquilidad.</span>
+                        </div>
+                        <a href="propiedades.html"
+                            class="text-green-600 mt-4 inline-block hover:bg-green-700 hover:text-white py-2 px-6 rounded-lg transition duration-300 transform hover:scale-105">Ver más detalles</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Misión y Visión -->
+    <section class="py-20 bg-gradient-to-r from-blue-500 to-blue-800 text-white">
+        <div class="container mx-auto text-center px-6">
+            <h2 class="text-5xl sm:text-6xl font-bold text-white mb-12">Nuestra Misión y Visión</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-12">
+                <!-- Misión -->
+                <div class="w-full px-8 py-10 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-flag fa-4x text-blue-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Nuestra Misión</h3>
+                    <p class="text-lg text-gray-600">Brindar asesoría especializada para la compra y venta de terrenos, ofreciendo a nuestros clientes una experiencia personalizada y transparente, asegurando la correcta inversión en sus proyectos.</p>
+                </div>
+
+                <!-- Visión -->
+                <div class="w-full px-8 py-10 bg-white rounded-lg shadow-lg transform hover:scale-105 transition duration-500 ease-in-out"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-bullseye fa-4x text-blue-600"></i>
+                    </div>
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-6">Nuestra Visión</h3>
+                    <p class="text-lg text-gray-600">Ser la inmobiliaria líder en el mercado, reconocida por nuestra excelencia, integridad y compromiso con el éxito de nuestros clientes, ofreciendo terrenos ideales para diversos tipos de proyectos a nivel nacional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto text-center px-6" data-aos="fade-up">
+            <h2 class="text-4xl font-semibold text-gray-800 mb-12">Lo que dicen nuestros clientes</h2>
+            <div class="flex flex-wrap justify-center gap-12">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-xs transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-xl">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-quote-left text-blue-600 text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"La atención y el asesoramiento que recibimos fueron excepcionales. Compramos el terreno perfecto para nuestro proyecto."</p>
+                    <p class="font-semibold text-gray-800 text-lg">Carlos Ramírez</p>
+                    <p class="text-gray-500">Cliente Satisfecho</p>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-lg max-w-xs transform hover:scale-105 transition duration-500 ease-in-out hover:shadow-xl">
+                    <div class="flex justify-center mb-6">
+                        <i class="fas fa-quote-left text-blue-600 text-3xl"></i>
+                    </div>
+                    <p class="text-gray-600 italic mb-4">"Excelente experiencia. Nos ayudaron a elegir el terreno adecuado para nuestras necesidades. Muy recomendados."</p>
+                    <p class="font-semibold text-gray-800 text-lg">Ana González</p>
+                    <p class="text-gray-500">Cliente Satisfecha</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer cargado dinámicamente -->
+    <div id="footer-container"></div>
+
+    <!-- Script AOS (Animate On Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // Cargar el header y el footer
+        window.onload = function () {
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    // Llamar a la función para inicializar el menú
+                    initializeMobileMenu();
+                });
+
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                });
+        };
+
+        // Función para inicializar el menú móvil
+        function initializeMobileMenu() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            // Verificamos si los elementos existen antes de aplicarles el evento
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('block');
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

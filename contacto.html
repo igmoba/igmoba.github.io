@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Inmobiliaria IGMOBA</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/igmoba.png" type="image/png">
+
+    <!-- Estilos adicionales (Tailwind CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Animaciones adicionales (Animate.css) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+
+<body>
+    <!-- Aquí se cargará el header -->
+    <div id="header-container"></div>
+
+    <!-- Contacto Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-semibold mb-8 animate__animated animate__fadeIn animate__delay-1s">
+                Contáctanos</h2>
+            <p class="text-lg sm:text-xl mb-12">¿Tienes alguna pregunta o necesitas más información? ¡Estamos aquí para
+                ayudarte!</p>
+
+            <!-- Opciones de Contacto -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Teléfono -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 hover:bg-blue-50">
+                    <div class="mb-4">
+                        <i class="fas fa-phone-alt text-4xl text-blue-600"></i> <!-- Icono de Teléfono -->
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Llámanos</h3>
+                    <p class="text-gray-600 mb-4">¿Prefieres hablar directamente? ¡Llámanos al siguiente número!</p>
+                    <a href="tel:+1234567890"
+                        class="text-blue-600 hover:text-blue-700 text-lg font-semibold">7471835407</a>
+                </div>
+
+                <!-- WhatsApp -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 hover:bg-blue-50">
+                    <div class="mb-4">
+                        <i class="fab fa-whatsapp text-4xl text-green-600"></i> <!-- Icono de WhatsApp -->
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Envíanos un Mensaje</h3>
+                    <p class="text-gray-600 mb-4">¡Hablemos por WhatsApp! Haz clic en el siguiente enlace para enviarnos
+                        un
+                        mensaje.</p>
+                    <a href="https://wa.me/7471835407?text=Hola,%20me%20interesa%20más%20información%20sobre%20los%20terrenos."
+                        target="_blank" class="text-green-600 hover:text-green-700 text-lg font-semibold">Enviar mensaje
+                        por
+                        WhatsApp</a>
+                </div>
+
+                <!-- Dirección -->
+                <div
+                    class="bg-white p-6 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:scale-105 hover:bg-blue-50">
+                    <div class="mb-4">
+                        <i class="fas fa-map-marker-alt text-4xl text-red-600"></i> <!-- Icono de Dirección -->
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Visítanos</h3>
+                    <p class="text-gray-600 mb-4">Si prefieres visitarnos en persona, estamos ubicados en:</p>
+                    <p class="text-gray-800 font-semibold">Andador, San Miguelito 5, Chilpancingo, Guerrero</p>
+                    <p class="text-gray-800 font-semibold">Colonia Centro</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Aquí se cargará el footer -->
+    <div id="footer-container"></div>
+
+    <!-- Script AOS (Animate On Scroll) -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+      <script>
+        // Cargar el header y el footer
+        window.onload = function () {
+            fetch('includes/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+                    console.log("Header cargado correctamente.");
+                    // Inicializar el menú móvil después de cargar el header
+                    initializeMobileMenu();
+                })
+                .catch(error => console.error('Error cargando el header:', error));
+
+            fetch('includes/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+                })
+                .catch(error => console.error('Error cargando el footer:', error));
+        };
+
+        // Función para inicializar el menú móvil
+        function initializeMobileMenu() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            console.log("Iniciando el menú móvil...");
+
+            // Verificamos si los elementos existen antes de aplicarles el evento
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    console.log("Botón de menú móvil clickeado");
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('block');
+                });
+            } else {
+                console.log("Error: No se encontraron los elementos del menú.");
+            }
+        }
+
+        // Función para mostrar/ocultar los detalles de las propiedades
+        function toggleDetails(serviceId) {
+            const details = document.getElementById('details-' + serviceId);
+            details.classList.toggle('hidden');
+        }
+    </script>
+</body>
+
+</html>
